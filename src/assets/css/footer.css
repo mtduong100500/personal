@@ -1,0 +1,26 @@
+.pagination{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 16px;
+    padding: 12px;
+    border-top: 1px solid #9e9d89;
+}
+
+.pagination a{
+    display: inline-block;
+    margin: 3px;
+    background-color: #e9ebee;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    text-decoration: none;
+    text-align: center;
+    line-height: 30px;
+    color: black;
+}
+
+.pagination a:focus{
+    background-color: #019160;
+    color: white;
+}

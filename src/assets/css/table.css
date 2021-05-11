@@ -1,0 +1,22 @@
+table{
+    width: 100%;
+}
+
+
+.data th{
+    font-weight: 700;
+}
+
+.data th, td{
+    padding: 10px;
+    text-align: left;
+}
+
+.data{
+    margin: 16px;
+    height: 70vh;
+}
+
+tr:nth-child(even){
+    background-color: #fafafa;
+}

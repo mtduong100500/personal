@@ -1,0 +1,29 @@
+.sub-heading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sub-heading h3{
+    margin: 15px;
+}
+
+.add-employee{
+    background-color: #019160;
+    border-radius: 4px;
+    font-size: 13px;
+    color: #ffffff;
+    padding: 24px;
+    height: 40px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 100;
+    border: none;
+    margin: 16px;
+}
+
+.add-employee:hover{
+    background-color: #2FBE8E;
+}

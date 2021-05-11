@@ -1,0 +1,55 @@
+@font-face {
+    font-family: "GoogleSans";
+    src: url("../font/GoogleSans-Regular.otf");
+  }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'GoogleSans', sans-serif;
+}
+  
+.main-content{
+    display: flex;
+    height: 100vh;
+}
+html, body {
+    height: 100%;
+}
+.header-table{
+    width: 100%;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+select{
+    padding: 5px 10px;
+    font-style: normal;
+    border: 1px solid #9e9d89;
+    border-radius: 5px;
+    font-size: 12px;
+    height: 36px;
+}
+
+select-selected {
+    background-color: green;
+}
+
+table{
+    border-collapse:collapse
+}
+
+td{
+    border-bottom: 1px solid #9e9d89;
+}
+
+th{
+    border-bottom: 1px solid #9e9d89;
+}
+
+a:hover{
+    cursor: pointer;
+}
+
