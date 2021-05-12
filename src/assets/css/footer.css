@@ -2,21 +2,21 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 16px;
-    padding: 12px;
-    border-top: 1px solid #9e9d89;
+    margin: 1em;
+    padding: 0.75em;
+    border-top: 0.0625em solid #9e9d89;
 }
 
 .pagination a{
     display: inline-block;
-    margin: 3px;
+    margin: 0.1875em;
     background-color: #e9ebee;
-    width: 30px;
-    height: 30px;
+    width: 1.875em;
+    height: 1.875em;
     border-radius: 50%;
     text-decoration: none;
     text-align: center;
-    line-height: 30px;
+    line-height: 1.875em;
     color: black;
 }
 

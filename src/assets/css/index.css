@@ -25,12 +25,12 @@ button:hover{
 }
 
 select{
-    padding: 5px 10px;
+    padding: 0.3125em 0.625em;
     font-style: normal;
-    border: 1px solid #9e9d89;
-    border-radius: 5px;
-    font-size: 12px;
-    height: 36px;
+    border: 0.0625em solid #9e9d89;
+    border-radius: 0.3125em;
+    font-size: 0.75em;
+    height: 2.25em;
 }
 
 select-selected {
@@ -42,11 +42,11 @@ table{
 }
 
 td{
-    border-bottom: 1px solid #9e9d89;
+    border-bottom: 0.0625em solid #9e9d89;
 }
 
 th{
-    border-bottom: 1px solid #9e9d89;
+    border-bottom: 0.0625em solid #9e9d89;
 }
 
 a:hover{

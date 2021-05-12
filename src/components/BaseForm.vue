@@ -10,7 +10,7 @@
                     </div>
                     <div class="input-area">
                         <div class="emloyee-info">
-                            <h3>A. THÔNG T  IN CHUNG</h3>
+                            <h3>A. THÔNG TIN CHUNG</h3>
                             <hr>
                             <BaseInput label="Mã nhân viên" type="text" placeholder="Mã nhân viên" v-model="employeeCode" />
                             <BaseInput label="Họ và tên" type="text" placeholder="Họ và tên" v-model="fullname" /> 

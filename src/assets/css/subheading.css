@@ -5,23 +5,23 @@
 }
 
 .sub-heading h3{
-    margin: 15px;
+    margin: 0.9375em;
 }
 
 .add-employee{
     background-color: #019160;
-    border-radius: 4px;
-    font-size: 13px;
+    border-radius: 0.25em;
+    font-size: 0.8125em;
     color: #ffffff;
-    padding: 24px;
-    height: 40px;
+    padding: 1.5em;
+    height: 2.5em;
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: 100;
     border: none;
-    margin: 16px;
+    margin: 1em;
 }
 
 .add-employee:hover{

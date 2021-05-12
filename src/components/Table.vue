@@ -14,17 +14,15 @@
                     <th>Mức lương cơ bản</th>
                     <th>Tình trạng công việc</th>
                 </tr>
-                <tr>
-                    <td>NV128934857</td>
-                    <td>Nguyễn Thị Diệu Linh</td>
-                    <td>Nữ</td>
-                    <td>01/01/2000</td>
-                    <td>094853511</td>
-                    <td>1@gmail.com</td>
-                    <td></td>
-                    <td></td>
-                    <td>200.000</td>
-                    <td>Thử việc</td>
+                <tr v-for="(employee,index) in employees"
+                    :key="index"    
+                >
+                    <td v-for="(info, index1) in employee"
+                        :key="index1"
+                    >
+                        {{info}}
+                    </td>  
+                      
                 </tr> 
         </table>
     </div>
@@ -33,7 +31,61 @@
 
 <script>
 export default {
-    name: 'Table'
+    name: 'Table',
+    data(){
+        return{
+            employees:[
+                {
+                    EmployeeCode: "NV128934857",
+                    Fullname: "Nguyễn Thị Diệu Linh",
+                    Gender: "Nữ",
+                    DateOfBirth: "01/01/2000",
+                    PhoneNumber: "094853511",
+                    Email: "1@gmail.com",
+                    Position: null,
+                    Department: null,
+                    Salary: 200000,
+                    WorkCondition: "Thử việc"
+                },
+                {
+                    EmployeeCode: "NV128934857",
+                    Fullname: "Nguyễn Thị Diệu Linh",
+                    Gender: "Nữ",
+                    DateOfBirth: "01/01/2000",
+                    PhoneNumber: "094853511",
+                    Email: "1@gmail.com",
+                    Position: null,
+                    Department: null,
+                    Salary: 200000,
+                    WorkCondition: "Thử việc"
+                },
+                {
+                    EmployeeCode: "NV128934857",
+                    Fullname: "Nguyễn Thị Diệu Linh",
+                    Gender: "Nữ",
+                    DateOfBirth: "01/01/2000",
+                    PhoneNumber: "094853511",
+                    Email: "1@gmail.com",
+                    Position: null,
+                    Department: null,
+                    Salary: 200000,
+                    WorkCondition: "Thử việc"
+                },
+                {
+                    EmployeeCode: "NV128934857",
+                    Fullname: "Nguyễn Thị Diệu Linh",
+                    Gender: "Nữ",
+                    DateOfBirth: "01/01/2000",
+                    PhoneNumber: "094853511",
+                    Email: "1@gmail.com",
+                    Position: null,
+                    Department: null,
+                    Salary: 200000,
+                    WorkCondition: "Thử việc"
+                }
+            ]
+        }
+    }
 }
 
 </script>
