@@ -7,7 +7,7 @@
         <SubHeader @open="toggleForm"></SubHeader>
         <Toolbar></Toolbar>
         <Table></Table>
-        <BaseForm v-if="showForm" @close="toggleForm"></BaseForm>
+        <BaseForm v-if="showForm" @close="toggleForm" @keypress.esc="toggleForm" ></BaseForm>
       </div>
       <Footer></Footer>
     </div>
@@ -23,7 +23,6 @@ import Table from './components/Table.vue'
 import Footer from './components/Footer.vue'
 import SubHeader from './components/SubHeader.vue'
 import Toolbar from './components/Toolbar.vue'
-import Form from './components/Form.vue'
 import BaseForm from './components/BaseForm.vue'  
 
 
@@ -47,6 +46,7 @@ export default {
   methods:{
     toggleForm(){
       this.showForm = !this.showForm
+  console.log("1")
     }
   }
 }

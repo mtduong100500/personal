@@ -84,18 +84,6 @@ export default {
 </script>
 
 <style>
-input[type=radio] {
-    border: 0px;
-    width: 100px;
-    height: 2em;
-}
-.gender{
-    display: flex;
-    flex-direction: column;
-}
 
-.employee-info{
-    display: flex;
-}
 
 </style>

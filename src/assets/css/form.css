@@ -22,3 +22,28 @@
     padding: 1.25em;
     border-radius: 0.25em;
 }
+
+.input-section{
+    display: flex;
+}
+
+input[type=radio] {
+    border: 0px;
+    width: 100px;
+    height: 2em;
+}
+.gender{
+    display: flex;
+
+}
+
+.employee-info{
+    display: flex;
+}
+
+.input-field{
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
