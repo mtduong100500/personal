@@ -4,19 +4,20 @@ table{
 
 
 .data th{
-    font-weight: 700;
+    font-size: 14px;
 }
 
 .data th, td{
-    padding: 0.625em;
+    padding: 16px;
     text-align: left;
+    font-weight: 700;
 }
 
 .data{
-    margin: 1em 1em 0 1em;
-    
+    margin: 16px 16px 0 16px;
 }
 
 tr:nth-child(even){
     background-color: #fafafa;
+
 }

@@ -22,7 +22,6 @@
                     >
                         {{info}}
                     </td>  
-                      
                 </tr> 
         </table>
     </div>
