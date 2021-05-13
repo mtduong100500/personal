@@ -6,6 +6,8 @@
             :type="type"
             :placeholder="placeholder"
             :name="name"
+            :ref="ref"
+            :src="src"
             @input="$emit('input', $event.target.value)"
         >
     </label>
@@ -19,7 +21,9 @@ export default {
         label: String,
         type: String,
         placeholder: String,
-        name:String
+        name:String,
+        ref:String,
+        src: String
     }
 }
 </script>
@@ -29,10 +33,5 @@ export default {
         display: flex;
         padding: 5px;
     }
-    .input-field{
-        padding: 5px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
+    
 </style>

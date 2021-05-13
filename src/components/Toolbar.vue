@@ -2,7 +2,7 @@
     <div class="toolbar">
         <form>
             <div class="left">
-                <base-input type="text" placeholder="Tìm kiếm theo Mã, Tên hoặc Số điện thoại" v-model="filter" class="filter"></base-input>
+                <base-input type="text" placeholder="Tìm kiếm theo Mã, Tên hoặc Số điện thoại" v-model="filter" className="filter"></base-input>
                 <select name="department">
                     <option value="">Tất cả phòng ban</option>
                 </select>

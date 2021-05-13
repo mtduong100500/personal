@@ -9,17 +9,19 @@
                     <div class="input-area">
                         <div class="emloyee-info">
                             <div class="avatar" >
-                                <BaseInput type="file" src="../assets/img/default-avatar.jpg"/>
+                                <img src="../assets/img/default-avatar.jpg" class="default-avatar">
+                                <BaseInput type="file" class="choose-file"/>
+                                <h4 class="notification">Vui lòng chọn ảnh có định dạng .jpg, .jpeg, .png, .gif</h4>
                             </div>
-                            <BaseInput label="Mã nhân viên" type="text" placeholder="Mã nhân viên" v-model="employeeCode" ref="input"/>
+                            <BaseInput label="Mã nhân viên" type="text" placeholder="Mã nhân viên" v-model="employeeCode" ref="input" />
                             <BaseInput label="Họ và tên" type="text" placeholder="Họ và tên" v-model="fullname" /> 
-                            <BaseInput label="Ngày sinh" type="date" v-model="dateofbirth" /> 
+                            <BaseInput label="Ngày sinh" type="date" v-model="dateofbirth" class="input-field"/> 
                             <BaseInput label="Email" type="email" placeholder="Email" v-model="email" /> 
-                            <BaseInput label="Số điện thoại" type="text" placeholder="Số điện thoại" v-model="phone_number" /> 
+                            <BaseInput label="Số điện thoại" type="text" placeholder="Số điện thoại" v-model="phone_number"  /> 
                             </div>
                         <div class="emloyee-info">  
                             <div class="gender">
-                                <BaseInput label="Nam" type="radio" v-model="gender" name="gender"/> 
+                                <BaseInput label="Nam" type="radio" v-model="gender" name="gender" /> 
                                 <BaseInput label="Nữ" type="radio" v-model="gender" name="gender"/> 
                                 <BaseInput label="Khác" type="radio" v-model="gender" name="gender"/> 
                             </div>
@@ -61,7 +63,9 @@ export default {
             taxID: "",
             salary: "",
             join_date: "",
-            status: ""
+            status: "",
+            ref: "",
+            src: ""
     }
     },
     components:{
@@ -72,7 +76,8 @@ export default {
             this.$emit('close')
         },
         autoFocus(){
-            this.$refs.input.$el.focus()
+            this.$emit('autoFocus')
+            
         }
     }
 }
@@ -80,4 +85,21 @@ export default {
 
 <style>
 
+.input-field{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.default-avatar {
+    width: 180px;
+    border-radius: 50%;
+    border: 1px solid;
+}
+.choose-file{
+
+}
+
+.notification{
+    width: 50px;
+}
 </style>

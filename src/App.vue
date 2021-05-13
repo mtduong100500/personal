@@ -7,7 +7,7 @@
         <SubHeader @open="toggleForm"></SubHeader>
         <Toolbar></Toolbar>
         <Table></Table>
-        <BaseForm v-if="showForm" @close="toggleForm" @keyup="toggleForm" ></BaseForm>
+        <BaseForm v-if="showForm" @close="toggleForm" @keyup="toggleForm"></BaseForm>
       </div>
       <Footer></Footer>
     </div>
@@ -46,8 +46,11 @@ export default {
   methods:{
     toggleForm(){
       this.showForm = !this.showForm 
-      console.log(this.$refs.input)
+      if(this.showForm == true){
+        this.$refs.input.$el.focus()
+      }
     }
+
   }
 }
 </script>
