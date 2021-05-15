@@ -1,12 +1,9 @@
-@font-face {
-    font-family: "GoogleSans";
-    src: url("../font/GoogleSans-Regular.otf");
-  }
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'GoogleSans', sans-serif;
+    font-family: Regular, sans-serif;
 }
   
 .main-content{
@@ -25,7 +22,7 @@ button:hover{
 }
 
 select{
-    padding: 5px 16;
+    padding: 5px 16px;
     font-style: normal;
     border: 1px solid #9e9d89;
     border-radius: 5px;
@@ -44,15 +41,17 @@ table{
 td{
     border-bottom: 1px solid #9e9d89;
     font-size: 13px;
+
 }
 
 th{
     border-bottom: 1px solid #9e9d89;
 }
-tr{
-    
-}
+
 a:hover{
     cursor: pointer;
 }
 
+input{
+    text-indent: 10px;
+}

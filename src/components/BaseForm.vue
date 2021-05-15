@@ -9,8 +9,7 @@
                     <div class="input-area">
                         <div class="emloyee-info">
                             <div class="avatar" >
-                                <img src="../assets/img/default-avatar.jpg" class="default-avatar">
-                                <BaseInput type="file" class="choose-file"/>
+                                <BaseInput type="file" class="default-avatar" />
                                 <h4 class="notification">Vui lòng chọn ảnh có định dạng .jpg, .jpeg, .png, .gif</h4>
                             </div>
                             <BaseInput label="Mã nhân viên" type="text" placeholder="Mã nhân viên" v-model="employeeCode" ref="input" />
@@ -74,10 +73,6 @@ export default {
     methods:{
         closeForm(){
             this.$emit('close')
-        },
-        autoFocus(){
-            this.$emit('autoFocus')
-            
         }
     }
 }
@@ -91,12 +86,7 @@ export default {
     align-items: center;
 }
 .default-avatar {
-    width: 180px;
-    border-radius: 50%;
-    border: 1px solid;
-}
-.choose-file{
-
+    background: url('../assets/img/default-avatar.jpg') no-repeat;
 }
 
 .notification{

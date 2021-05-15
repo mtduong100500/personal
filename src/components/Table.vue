@@ -17,11 +17,10 @@
                 <tr v-for="(employee,index) in employees"
                     :key="index"    
                 >
-                    <td v-for="(info, index1) in employee"
-                        :key="index1"
-                    >
+                    <td v-for="(info,index1) in employee"
+                    :key="index1">
                         {{info}}
-                    </td>  
+                    </td> 
                 </tr> 
         </table>
     </div>
@@ -31,15 +30,23 @@
 
 <script>
 import data from '../data.js'
+import common from '../common.js'
 export default {
     name: 'Table',
     data(){
         return{
-            employees: data
+            employees: data,
         }
-    }
+    },
+    method:{}
 }
 
 </script>
+
+<style scoped>
+.table td{
+    font-family: 'Medium';
+}
+</style>
 
 

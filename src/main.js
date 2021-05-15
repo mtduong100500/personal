@@ -8,5 +8,7 @@ import './assets/css/subheading.css';
 import './assets/css/toolbar.css';
 import './assets/css/footer.css';
 import './assets/css/form.css';
+import './assets/css/fonts.css';
+import router from './router'
 
-createApp(App).mount('#app')
+createApp(App).use(router).mount('#app')

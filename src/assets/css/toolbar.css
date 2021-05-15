@@ -9,16 +9,16 @@
     width: 30px;
     height: 30px;
 }
+
 form{
     display: flex;
     justify-content: space-between;
 }
 
-
 input{
     border: 1px solid #9e9d89;
     border-radius: 5px;
-    font-size: 12px;
+    font-size: 13px;
     color: #9e9d89;
     height: 36px;
     margin: auto 16px;

@@ -4,13 +4,13 @@ table{
 
 
 .data th{
-    font-size: 14px;
+    font-size: 13px;
 }
 
 .data th, td{
     padding: 16px;
     text-align: left;
-    font-weight: 700;
+    font-family: Bold;
 }
 
 .data{
@@ -19,5 +19,4 @@ table{
 
 tr:nth-child(even){
     background-color: #e7e6e1;
-
 }

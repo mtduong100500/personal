@@ -11,7 +11,7 @@
 .add-employee{
     background-color: #019160;
     border-radius: 4px;
-    font-size: 14px;
+    font-size: 13px;
     color: #ffffff;
     padding: 20px;
     height: 20px;
@@ -19,7 +19,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-weight: 100;
+    font-weight: Light;
     border: none;
     margin: 16px;
 }
