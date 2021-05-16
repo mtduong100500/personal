@@ -14,13 +14,17 @@
                     <th>Mức lương cơ bản</th>
                     <th>Tình trạng công việc</th>
                 </tr>
-                <tr v-for="(employee,index) in employees"
-                    :key="index"    
-                >
-                    <td v-for="(info,index1) in employee"
-                    :key="index1">
-                        {{info}}
-                    </td> 
+                <tr v-for="employee in info" :key="employee.EmployeeId">
+                    <td>{{employee.EmployeeCode}}</td> 
+                    <td>{{employee.FullName}}</td>
+                    <td>{{employee.Gender | formatGender}}</td>
+                    <td>{{employee.DateOfBirth}}</td>
+                    <td>{{employee.PhoneNumber}}</td>
+                    <td>{{employee.Email}}</td>
+                    <td>{{employee.PositionName}}</td>
+                    <td>{{employee.DepartmentName}}</td>
+                    <td>{{employee.Salary}}</td>
+                    <td>{{employee.WorkStatus}}</td>
                 </tr> 
         </table>
     </div>
@@ -29,16 +33,25 @@
 
 
 <script>
-import data from '../data.js'
-import common from '../common.js'
+import axios from 'axios';
 export default {
     name: 'Table',
     data(){
         return{
-            employees: data,
+            info: null,
+            
         }
     },
-    method:{}
+    method:{
+        formatGender(number){
+ 
+        }
+    },
+    mounted(){
+        axios.get('http://cukcuk.manhnv.net/v1/Employees')
+        .then(response => this.info = response.data)
+        
+    }
 }
 
 </script>

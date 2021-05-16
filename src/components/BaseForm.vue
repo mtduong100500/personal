@@ -64,7 +64,8 @@ export default {
             join_date: "",
             status: "",
             ref: "",
-            src: ""
+            src: "",
+
     }
     },
     components:{
@@ -74,7 +75,8 @@ export default {
         closeForm(){
             this.$emit('close')
         }
-    }
+    },
+    
 }
 </script>
 
