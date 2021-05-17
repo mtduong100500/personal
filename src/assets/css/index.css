@@ -38,15 +38,12 @@ table{
     border-collapse:collapse
 }
 
-td{
+tr{
     border-bottom: 1px solid #9e9d89;
     font-size: 13px;
 
 }
 
-th{
-    border-bottom: 1px solid #9e9d89;
-}
 
 a:hover{
     cursor: pointer;

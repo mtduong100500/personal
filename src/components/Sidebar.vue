@@ -21,3 +21,13 @@ export default {
     name: 'Sidebar'
 }
 </script>
+
+<style scoped>
+li :nth-child(-n+6):focus{
+    background: #019160;
+    color :white;
+}
+
+
+
+</style>

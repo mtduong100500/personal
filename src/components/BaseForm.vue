@@ -10,9 +10,8 @@
                         <div class="emloyee-info">
                             <div class="avatar" >
                                 <BaseInput type="file" class="default-avatar" />
-                                <h4 class="notification">Vui lòng chọn ảnh có định dạng .jpg, .jpeg, .png, .gif</h4>
                             </div>
-                            <BaseInput label="Mã nhân viên" type="text" placeholder="Mã nhân viên" v-model="employeeCode" ref="input" />
+                            <BaseInput label="Mã nhân viên" type="text" placeholder="Mã nhân viên" v-model="employeeCode" ref="manv" />
                             <BaseInput label="Họ và tên" type="text" placeholder="Họ và tên" v-model="fullname" /> 
                             <BaseInput label="Ngày sinh" type="date" v-model="dateofbirth" class="input-field"/> 
                             <BaseInput label="Email" type="email" placeholder="Email" v-model="email" /> 
@@ -32,7 +31,7 @@
                     </div>
                     <div class="btn">       
                         <button class="btn-cancel" @click="closeForm">Hủy</button>
-                        <button class="btn-save" @click="autoFocus">Lưu</button>
+                        <button class="btn-save" >Lưu</button>
                     </div>
                 </div>
             </form>
@@ -40,10 +39,8 @@
     </div>
 </div>
 </template>
-    
 <script>
 import BaseInput from "./BaseInput.vue"
-
 export default {
     name:"BaseForm",
     data(){
@@ -65,8 +62,7 @@ export default {
             status: "",
             ref: "",
             src: "",
-
-    }
+        }
     },
     components:{
         BaseInput

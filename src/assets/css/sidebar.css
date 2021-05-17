@@ -10,7 +10,7 @@
     display: flex;
     flex-direction: column;
     border-right: 1px solid #9e9d89;
-    width: 220px;
+    width: 226px;
     height: 100%;
     font-size: 13px;
 }
@@ -27,9 +27,7 @@ a>span{
 
 .navbar-content li:hover{
     background-color: #e5e5e5;
-
 }
-
 
 li a{
     display: flex;

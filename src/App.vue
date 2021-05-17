@@ -3,21 +3,18 @@
     <Sidebar></Sidebar>
     <div class="header-table">
       <Header></Header>
-      <div class="main">
+      <div class="main" >
         <SubHeader @open="toggleForm"></SubHeader>
         <Toolbar></Toolbar>
         <router-view></router-view>
-        <BaseForm v-if="showForm" @close="toggleForm" @keyup="toggleForm"></BaseForm>
+        <BaseForm v-if="showForm" @close="toggleForm" @keydown.esc="toggleForm"></BaseForm>
         <Footer></Footer>
       </div>
-      
     </div>
-
   </div>
 </template>
 
 <script>
-
 import Sidebar from './components/Sidebar.vue'
 import Header from './components/Header.vue'
 import Table from './components/Table.vue'
@@ -26,9 +23,7 @@ import SubHeader from './components/SubHeader.vue'
 import Toolbar from './components/Toolbar.vue'
 import BaseForm from './components/BaseForm.vue'  
 
-
 export default {
-
   name: 'App',
   components: {
     Sidebar,
@@ -47,9 +42,7 @@ export default {
   methods:{
     toggleForm(){
       this.showForm = !this.showForm 
-
     }
-
   }
 }
 </script>

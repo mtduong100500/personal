@@ -4,15 +4,13 @@
     border: 1px solid #9e9d89;
     border-radius: 5px;
     padding: 0;
-    background-image: url("../icon/refresh.png");
-    background-size: cover;
     width: 30px;
     height: 30px;
 }
 
 form{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; 
 }
 
 input{
