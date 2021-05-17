@@ -20,13 +20,13 @@
                 <tr v-for="employee in info" :key="employee.EmployeeId">
                     <td>{{employee.EmployeeCode}}</td> 
                     <td>{{employee.FullName}}</td>
-                    <td>{{employee.Gender}}</td>
+                    <td>{{formatGender(employee.Gender)}}</td>
                     <td>{{employee.DateOfBirth}}</td>
                     <td>{{employee.PhoneNumber}}</td>
                     <td>{{employee.Email}}</td>
                     <td>{{employee.PositionName}}</td>
                     <td>{{employee.DepartmentName}}</td>
-                    <td>{{employee.Salary}}</td>
+                    <td>{{formatMoney(employee.Salary)}}</td>
                     <td>{{employee.WorkStatus}}</td>
                 </tr> 
                 <!-- <tr v-for="employee,index in employees" :key="index">
@@ -50,13 +50,21 @@ export default {
             //employees: data
         }
     },
-    method:{
+    methods:{
         formatGender(value){
             var gender = ""
             if(value === 0) gender = "Nữ"
             else if(value === 1) gender = "Nam"
             else gender = "Khác"
             return gender
+        },
+        formatMoney(money){
+            if(money === null) return 
+            if(!isNaN(money)){
+                return money.toString().replace(/(\d)(?=(\d{3})+(?:\.\d+)?$)/g, "$1.");
+            }else {
+                return money;
+            }
         }
     },
     mounted(){

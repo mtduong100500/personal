@@ -12,7 +12,7 @@
                                 <BaseInput type="file" class="default-avatar" />
                             </div>
                             <div class="label_input">
-                                <label>Mã nhân viên</label><BaseInput  type="text" placeholder="Mã nhân viên" v-model="employeeCode" ref="manv" />
+                                <label>Mã nhân viên</label><BaseInput  type="text" placeholder="Mã nhân viên" v-model="employeeCode" />
                             </div>
                             <div class="label_input">
                                 <label>Họ và tên</label><BaseInput  type="text" placeholder="Họ và tên" v-model="fullname" /> 
