@@ -11,22 +11,46 @@
                             <div class="avatar" >
                                 <BaseInput type="file" class="default-avatar" />
                             </div>
-                            <BaseInput label="Mã nhân viên" type="text" placeholder="Mã nhân viên" v-model="employeeCode" ref="manv" />
-                            <BaseInput label="Họ và tên" type="text" placeholder="Họ và tên" v-model="fullname" /> 
-                            <BaseInput label="Ngày sinh" type="date" v-model="dateofbirth" class="input-field"/> 
-                            <BaseInput label="Email" type="email" placeholder="Email" v-model="email" /> 
-                            <BaseInput label="Số điện thoại" type="text" placeholder="Số điện thoại" v-model="phone_number"  /> 
+                            <div class="label_input">
+                                <label>Mã nhân viên</label><BaseInput  type="text" placeholder="Mã nhân viên" v-model="employeeCode" ref="manv" />
                             </div>
+                            <div class="label_input">
+                                <label>Họ và tên</label><BaseInput  type="text" placeholder="Họ và tên" v-model="fullname" /> 
+                            </div>
+                            <div class="label_input">
+                                <label>Ngày sinh</label><BaseInput  type="date" v-model="dateofbirth" class="input-field"/> 
+                            </div>
+                            <div class="label_input">
+                                <label>Email</label><BaseInput  type="email" placeholder="Email" v-model="email" /> 
+                            </div>
+                            <div class="label_input">
+                                <label>Số điện thoại</label><BaseInput  type="text" placeholder="Số điện thoại" v-model="phone_number"  /> 
+                            </div>
+                        </div>
                         <div class="emloyee-info">  
                             <div class="gender">
-                                <BaseInput label="Nam" type="radio" v-model="gender" name="gender" /> 
-                                <BaseInput label="Nữ" type="radio" v-model="gender" name="gender"/> 
-                                <BaseInput label="Khác" type="radio" v-model="gender" name="gender"/> 
+                                <div class="label_input">
+                                    <label>Nam</label><BaseInput  type="radio" v-model="gender" name="gender" /> 
+                                </div>
+                                <div class="label_input">
+                                    <label>Nữ</label><BaseInput  type="radio" v-model="gender" name="gender"/> 
+                                </div>
+                                <div class="label_input">
+                                    <label>Khác</label><BaseInput  type="radio" v-model="gender" name="gender"/> 
+                                </div>
                             </div>
-                            <BaseInput label="Chức vụ" type="text" placeholder="Vị trí" v-model="position" />
-                            <BaseInput label="Phòng ban" type="text" placeholder="Phòng ban" v-model="department" />
-                            <BaseInput label="Mức lương cơ bản" type="text" placeholder="Mức lương cơ bản" v-model="salary" />
-                            <BaseInput label="Tình trạng công việc" type="text" placeholder="Tình trạng công việc" v-model="status" />
+                            <div class="label_input">
+                                <label>Chức vụ</label><BaseInput  type="text" placeholder="Vị trí" v-model="position" />
+                            </div>
+                            <div class="label_input">
+                                <label>Phòng ban</label><BaseInput  type="text" placeholder="Phòng ban" v-model="department" />
+                            </div>
+                            <div class="label_input">
+                                <label>Mức lương cơ bản</label><BaseInput  type="text" placeholder="Mức lương cơ bản" v-model="salary" />
+                            </div>
+                            <div class="label_input">
+                                <label>Tình trạng công việc</label><BaseInput  type="text" placeholder="Tình trạng công việc" v-model="status" />
+                            </div>
                         </div>
                     </div>
                     <div class="btn">       
@@ -49,19 +73,12 @@ export default {
             fullname: "",
             dateofbirth: "",
             gender: "",
-            ID: "",
-            creation_date: "",
-            creation_place: "",
             email: "",
             phone_number: "",
             position: "",
             department: "",
-            taxID: "",
             salary: "",
-            join_date: "",
             status: "",
-            ref: "",
-            src: "",
         }
     },
     components:{
@@ -90,4 +107,5 @@ export default {
 .notification{
     width: 50px;
 }
+
 </style>

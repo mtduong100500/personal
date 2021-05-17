@@ -1,16 +1,11 @@
 <template>
 <div class="input-field">
-    <label for="">
-        {{label}}
-        <input
-            :type="type"
-            :placeholder="placeholder"
-            :name="name"
-            :ref="ref"
-            :src="src"
-            @input="$emit('input', $event.target.value)"
-        >
-    </label>
+    <input
+        :type="type"
+        :placeholder="placeholder"
+        :name="name"
+        @input="$emit('input', $event.target.value)"
+    >
 </div>
 </template>
 
@@ -18,12 +13,9 @@
 export default {
     name:"BaseInput",
     props:{
-        label: String,
         type: String,
         placeholder: String,
         name:String,
-        ref:String,
-        src: String
     }
 }
 </script>
