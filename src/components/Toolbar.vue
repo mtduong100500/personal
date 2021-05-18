@@ -11,18 +11,27 @@
                 </select>
             </div>
             <div>
-                <button class="refresh"><img src="../assets/icon/refresh.png" ></button>
+                <button class="refresh" @click="loadTable"><img src="../assets/icon/refresh.png" ></button>
             </div>
         </form>
     </div>
 </template>
 <script>
 import BaseInput from './BaseInput.vue'
+
 export default {
   components: { BaseInput },
     name:"Toolbar",
     data(){
         return{
+        }
+    },
+    create:{
+
+    },
+    methods:{
+        loadTable(){
+            
         }
     }
 }

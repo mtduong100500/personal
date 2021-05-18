@@ -1,12 +1,11 @@
 <template>
-<div class="input-field">
-    <input
-        :type="type"
-        :placeholder="placeholder"
-        :name="name"
-        @input="$emit('input', $event.target.value)"
-    >
-</div>
+<input
+    :type="type"
+    :placeholder="placeholder"
+    :name="name"
+    :require="require"
+    @input="$emit('input', $event.target.value)"
+>
 </template>
 
 <script>
@@ -16,6 +15,7 @@ export default {
         type: String,
         placeholder: String,
         name:String,
+        require:Boolean
     }
 }
 </script>
