@@ -1,22 +1,41 @@
 <template>
-    <div class="header">
-        <div class="cb-box">
-            <select name="restaurant">
-                <option value="">Nhà hàng Biển Đông</option>
-                <option value="">Nhà hàng Biển Tây</option>
-                <option value="">Nhà hàng Biển Nam</option>
-                <option value="">Nhà hàng Biển Bắc</option>
-            </select>
-        </div>
-        <div class="info">
-            <img src="../assets/icon/avatar-default.png" class="avatar">
-            <p>Mai Thái Dương</p>
-            <button class="info-option"><img src="../assets/icon/option.png" ></button>
-        </div>
-    </div>
+    <v-app-bar 
+    app
+    flat
+    color="white"
+    >
+        <v-col
+        class="d-flex"
+        cols="2"
+        sm="2"
+        >
+            <v-select
+            :items="items"
+            label="Nhà Hàng Biển Đông"
+            dense
+            solo
+            ></v-select>
+        </v-col>
+        <v-spacer></v-spacer>
+        <v-avatar size="24">
+            <img
+                src="../assets/icon/avatar-default.png"
+                alt="Duong"
+                
+            >
+        </v-avatar>
+        <v-toolbar-title class="mx-4">Mai Thái Dương</v-toolbar-title>
+        <v-btn icon>
+            <v-img src="../assets/icon/option.png" height="24" contain></v-img>
+        </v-btn>
+    </v-app-bar>
 </template>
+
 <script>
 export default {
-    name: 'Header'
+    name: "Header",
+    data: () => ({
+      items: ['Foo', 'Bar', 'Fizz', 'Buzz'],
+    }),
 }
 </script>

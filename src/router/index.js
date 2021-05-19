@@ -1,54 +1,38 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
-
 Vue.use(VueRouter)
 
 const routes = [
   {
+    path: '/danhmuakhachhang',
+    name: 'danhmuckhachhang',
+    component: () => import('../views/danh-muc-khach-hang')
+  },
+  {
     path: '/',
-    name: 'Danhmucnhanvien',
-    component: () => import(/* webpackChunkName: "about" */ '../views/danhmucnhanvien.vue')
-  },
-  {
-    path: '/hethong',
-    name: 'Hethong',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/hethong.vue')
-  },
-  {
-    path: '/baocao',
-    name: 'Baocao',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/baocao.vue')
+    name: 'danhmucsanpham',
+    component: () => import('../views/danh-muc-san-pham')
   },
   {
     path: '/muahang',
-    name: 'Muahang',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/muahang.vue')
+    name: 'muahang',
+    component: () => import('../views/mua-hang')
   },
   {
-    path: '/danhmuckhachhang',
-    name: 'Danhmuckhachhang',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/danhmuckhachhang.vue')
+    path: '/thietlap',
+    name: 'thietlap',
+    component: () => import('../views/thiet-lap')
   },
   {
     path: '/tongquan',
-    name: 'Tongquan',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/tongquan.vue')
+    name: 'tongquan',
+    component: () => import('../views/tong-quan')
+  },
+  {
+    path: '/baocao',
+    name: 'baocao',
+    component: () => import('../views/bao-cao')
   }
 ]
 
