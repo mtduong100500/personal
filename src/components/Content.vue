@@ -6,9 +6,9 @@
       :page.sync="page"
       :items-per-page="itemsPerPage"
       sort-by="id"
-      class="elevation-1"
       hide-default-footer
       @page-count="pageCount = $event"
+      class="px-4"
     >
       <template v-slot:item.Gender="{ item }">
         <span>{{ formatGender(item.Gender) }}</span>
@@ -19,21 +19,24 @@
       <template v-slot:item.Salary="{ item }">
         <span>{{ formatMoney(item.Salary) }}</span>
       </template>
+      <template v-slot:header.name="{ header }">
+        {{ header.text.toUpperCase() }}
+      </template>
       <template v-slot:top>
         <v-toolbar flat>
-          <v-toolbar-title>Danh sách nhân viên</v-toolbar-title>
+          <v-toolbar-title class="font-weight-bold">Danh sách nhân viên</v-toolbar-title>
           <v-spacer></v-spacer>
           <v-dialog v-model="dialog" max-width="600px">
             <template v-slot:activator="{ on, attrs }">
-              <v-btn color="#019160" dark class="mb-2" v-bind="attrs" v-on="on">
+              <v-btn color="#019160" dark v-bind="attrs" v-on="on">
                 Thêm nhân viên
               </v-btn>
             </template>
+            
             <v-card>
               <v-card-title>
                 <span class="headline">{{ formTitle }}</span>
               </v-card-title>
-
               <v-card-text>
                 <v-container>
                   <v-row>
@@ -129,6 +132,7 @@
               </v-card-actions>
             </v-card>
           </v-dialog>
+          
           <v-dialog v-model="dialogDelete" max-width="500px">
             <v-card>
               <v-card-title class="headline"
@@ -146,13 +150,17 @@
               </v-card-actions>
             </v-card>
           </v-dialog>
+          
         </v-toolbar>
+        <Toolbar />
       </template>
+      <Toolbar />
       <template v-slot:item.actions="{ item }">
         <v-icon small class="mr-2" @click="editItem(item)"> mdi-pencil </v-icon>
         <v-icon small @click="deleteItem(item)"> mdi-delete </v-icon>
       </template>
     </v-data-table>
+    
     <div class="text-center pt-2">
       <v-pagination
         v-model="page"
@@ -166,12 +174,16 @@
 <script>
 import moment from "moment";
 import axios from "axios";
+import Toolbar from "../components/Toolbar"
 export default {
+  components:{
+    Toolbar
+  },
   data: () => ({
     menu2: false,
     page: 1,
     pageCount: 0,
-    itemsPerPage: 15,
+    itemsPerPage: 13,
     dialog: false,
     dialogDelete: false,
     headers: [
@@ -306,5 +318,19 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
+
+.text-start span {
+  font-size: 13px;
+}
+
+
+.v-toolbar__content{
+  padding: 0;
+  margin: 0;
+}
+.col{
+  padding: 0;
+  margin: 0;
+}
 </style>

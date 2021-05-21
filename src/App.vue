@@ -3,6 +3,7 @@
     <Sidebar />
     <v-main>
       <Header />
+      <v-divider class="ma-0"></v-divider>
       <router-view></router-view>
     </v-main>
   </v-app>
@@ -10,20 +11,19 @@
 
 <script>
 import Sidebar from './components/Sidebar'
-import AppBar from './components/AppBar'
 import Header from './components/Header'
 import Content from './components/Content'
 export default {
   data: () => ({ drawer: null }),
   components:{
     Sidebar,
-    AppBar,
     Header,
     Content
   }
 }
 </script>
 
-<style lang="scss" scoped>
-
+<style>
+  @import './styles/fonts.css';
+ 
 </style>

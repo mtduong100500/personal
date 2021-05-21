@@ -4,6 +4,7 @@
       :mini-variant="mini"
       permanent
       app
+      width="230"
     >
       <v-list>
         <v-list-item>
@@ -16,7 +17,7 @@
             </v-list-item-icon>
             <v-list-item-content>
                 <v-list-item-title>
-                    <v-img src="../assets/img/cukcuk-logo.png" contain height="24" />
+                    <v-img src="../assets/img/cukcuk-logo.png" max-width="100"/>
                 </v-list-item-title>
             </v-list-item-content>
         </v-list-item>
@@ -34,7 +35,7 @@
                 />
             </v-list-item-icon>
             <v-list-item-content>
-                <v-list-item-title class="text-subtitle-2">{{ item.title }}</v-list-item-title>
+                <v-list-item-title class="text-subtitle-2 font-weight-bold" >{{ item.title }}</v-list-item-title>
             </v-list-item-content>
         </v-list-item>
       </v-list>
@@ -69,4 +70,5 @@
 .v-list-item:hover{
   cursor: pointer;
 }
+
 </style>
