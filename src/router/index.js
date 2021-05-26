@@ -5,7 +5,7 @@ Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/danhmuakhachhang',
+    path: '/danhmuckhachhang',
     name: 'danhmuckhachhang',
     component: () => import('../views/danh-muc-khach-hang')
   },

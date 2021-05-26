@@ -12,13 +12,11 @@
 <script>
 import Sidebar from './components/Sidebar'
 import Header from './components/Header'
-import Content from './components/Content'
 export default {
   data: () => ({ drawer: null }),
   components:{
     Sidebar,
     Header,
-    Content
   }
 }
 </script>
