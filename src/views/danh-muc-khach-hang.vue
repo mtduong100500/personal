@@ -10,144 +10,20 @@
       @page-count="pageCount = $event"
       class="px-4"
     >
-      <template v-slot:item.Gender="{ item }">
-        <span>{{ formatGender(item.Gender) }}</span>
+      <template v-slot:item.gender="{ item }">
+        <span>{{ formatGender(item.gender) }}</span>
       </template>
-      <template v-slot:item.DateOfBirth="{ item }">
-        <span>{{ formatDate(item.DateOfBirth) }}</span>
+      <template v-slot:item.dateOfBirth="{ item }">
+        <span>{{ formatDate(item.dateOfBirth) }}</span>
       </template>
       <template v-slot:header.name="{ header }">
         {{ header.text.toUpperCase() }}
       </template>
       <template v-slot:top>
         <v-toolbar flat>
-          <v-toolbar-title class="font-weight-bold">Danh sách nhân viên</v-toolbar-title>
+          <v-toolbar-title class="font-weight-bold">Danh sách khách hàng</v-toolbar-title>
           <v-spacer></v-spacer>
-          <v-dialog v-model="dialog" max-width="600px">
-            <template v-slot:activator="{ on, attrs }">
-              <v-btn color="#019160" dark v-bind="attrs" v-on="on">
-                Thêm nhân viên
-              </v-btn>
-            </template>
-            
-            <v-card>
-              <v-card-title>
-                <span class="headline">{{ formTitle }}</span>
-              </v-card-title>
-              <v-card-text>
-                <v-container>
-                  <v-row>
-                    <v-col cols="12" sm="6" md="4">
-                      <v-text-field
-                        v-model="editedItem.EmployeeCode"
-                        label="Mã nhân viên"
-                      ></v-text-field>
-                    </v-col>
-                    <v-col cols="12" sm="6" md="4">
-                      <v-text-field
-                        v-model="editedItem.FullName"
-                        label="Họ và tên"
-                      ></v-text-field>
-                    </v-col>
-                    <v-col cols="12" sm="6" md="4">
-                      <v-text-field
-                        v-model="editedItem.Gender"
-                        label="Giới tính"
-                      ></v-text-field>
-                    </v-col>
-                    <v-col cols="12" sm="6" md="4">
-                      <v-menu
-                        v-model="menu2"
-                        :close-on-content-click="false"
-                        :nudge-right="40"
-                        transition="scale-transition"
-                        offset-y
-                        min-width="auto"
-                      >
-                        <template v-slot:activator="{ on, attrs }">
-                          <v-text-field
-                            v-model="editedItem.DateOfBirth"
-                            label="Picker without buttons"
-                            prepend-icon="mdi-calendar"
-                            readonly
-                            v-bind="attrs"
-                            v-on="on"
-                          ></v-text-field>
-                        </template>
-                        <v-date-picker
-                          v-model="editedItem.DateOfBirth"
-                          @input="menu2 = false"
-                        ></v-date-picker>
-                      </v-menu>
-                    </v-col>
-                    <v-col cols="12" sm="6" md="4">
-                      <v-text-field
-                        v-model="editedItem.PhoneNumber"
-                        label="Điện thoại"
-                      ></v-text-field>
-                    </v-col>
-                    <v-col cols="12" sm="6" md="4">
-                      <v-text-field
-                        v-model="editedItem.Email"
-                        label="Email"
-                      ></v-text-field>
-                    </v-col>
-                    <v-col cols="12" sm="6" md="4">
-                      <v-text-field
-                        v-model="editedItem.Position"
-                        label="Chức vụ"
-                      ></v-text-field>
-                    </v-col>
-                    <v-col cols="12" sm="6" md="4">
-                      <v-text-field
-                        v-model="editedItem.Department"
-                        label="Phòng ban"
-                      ></v-text-field>
-                    </v-col>
-                    <v-col cols="12" sm="6" md="4">
-                      <v-text-field
-                        v-model="editedItem.Salary"
-                        label="Mức lương cơ bản"
-                      ></v-text-field>
-                    </v-col>
-                    <v-col cols="12" sm="6" md="4">
-                      <v-text-field
-                        v-model="editedItem.WorkCondition"
-                        label="Tình trạng công việc"
-                      ></v-text-field>
-                    </v-col>
-                  </v-row>
-                </v-container>
-              </v-card-text>
 
-              <v-card-actions>
-                <v-spacer></v-spacer>
-                <v-btn color="blue darken-1" text @click="close">
-                  Cancel
-                </v-btn>
-                <v-btn color="blue darken-1" text @click="save"> Save </v-btn>
-              </v-card-actions>
-            </v-card>
-          </v-dialog>
-          
-          <v-dialog v-model="dialogDelete" max-width="500px">
-            <v-card>
-              <v-card-title class="headline"
-                >Are you sure you want to delete this item?</v-card-title
-              >
-              <v-card-actions>
-                <v-spacer></v-spacer>
-                <v-btn color="blue darken-1" text @click="closeDelete"
-                  >Cancel</v-btn
-                >
-                <v-btn color="blue darken-1" text @click="deleteItemConfirm"
-                  >OK</v-btn
-                >
-                <v-spacer></v-spacer>
-              </v-card-actions>
-            </v-card>
-          </v-dialog>
-          
         </v-toolbar>
         <Toolbar />
       </template>
@@ -189,53 +65,53 @@ name: "Danhmuckhachhang",
         text: "Mã khách hàng",
         align: "start",
         sortable: false,
-        value: "CustomerCode",
+        value: "customerCode",
         width: "200px"
       },
-      { text: "Họ và đệm", value: "FirstName" },
-      { text: "Tên", value: "LastName" },
-      { text: "Họ và tên", value: "FullName" },
-      { text: "Giới tính", value: "Gender" },
-      { text: "Địa chỉ", value: "Address" },
-      { text: "Ngày sinh", value: "DateOfBirth" },
-      { text: "Số điện thoại", value: "PhoneNumber" },
-      { text: "Khoản vay", value: "DebitAmount" },
-      { text: "Mã thẻ thành viên", value: "MemberCardCode" },
-      { text: "Tên công ty", value: "CompanyName"},
-      { text: "Mã số thuế công ty", value: "CompanyTaxCode"},
-      { text: "Tình trạng theo dõi", value: "IsStopFollow"},
-      { text: "Ngày tạo", value: "CreatedDate"},
-      { text: "Người tạo", value: "CreatedBy"},
-      { text: "Ngày chỉnh sửa", value: "ModifiedDate"},
-      { text: "Người chỉnh sửa", value: "ModifiedBy"},
+      { text: "Họ và đệm", value: "firstName", width: "200px" },
+      { text: "Tên", value: "lastname", width: "200px" },
+      { text: "Họ và tên", value: "fullname", width: "200px" },
+      { text: "Giới tính", value: "gender", width: "200px" },
+      { text: "Địa chỉ", value: "address", width: "200px" },
+      { text: "Ngày sinh", value: "dateOfBirth", width: "200px" },
+      { text: "Số điện thoại", value: "phoneNumber", width: "200px" },
+      { text: "Khoản vay", value: "debitAmount", width: "200px" },
+      { text: "Mã thẻ thành viên", value: "memberCardCode", width: "200px" },
+      { text: "Tên công ty", value: "companyName", width: "200px"},
+      { text: "Mã số thuế công ty", value: "companyTaxCode" , width: "200px"},
+      { text: "Tình trạng theo dõi", value: "isStopFollow" , width: "200px"},
+      { text: "Ngày tạo", value: "createdDate" , width: "200px"},
+      { text: "Người tạo", value: "createdBy" , width: "200px"},
+      { text: "Ngày chỉnh sửa", value: "modifiedDate" , width: "200px"},
+      { text: "Người chỉnh sửa", value: "modifiedBy" , width: "200px"},
       { text: "Actions", value: "actions", sortable: false },
     ],
     customers: [],
-    editedIndex: -1,
-    editedItem: {
-      CustomerCode: "",
-      FullName: "",
-      Gender: 0,
-      DateOfBith: "",
-      PhoneNumber: "",
-      Email: "",
-      Position: "",
-      Department: "",
-      Salary: 0,
-      WorkCondition: "",
-    },
-    defaultItem: {
-      EmployeeCode: "",
-      FullName: "",
-      Gender: 0,
-      DateOfBith: "",
-      PhoneNumber: "",
-      Email: "",
-      Position: "",
-      Department: "",
-      Salary: 0,
-      WorkCondition: "",
-    },
+    // editedIndex: -1,
+    // editedItem: {
+    //   CustomerCode: "",
+    //   FullName: "",
+    //   Gender: 0,
+    //   DateOfBith: "",
+    //   PhoneNumber: "",
+    //   Email: "",
+    //   Position: "",
+    //   Department: "",
+    //   Salary: 0,
+    //   WorkCondition: "",
+    // },
+    // defaultItem: {
+    //   EmployeeCode: "",
+    //   FullName: "",
+    //   Gender: 0,
+    //   DateOfBith: "",
+    //   PhoneNumber: "",
+    //   Email: "",
+    //   Position: "",
+    //   Department: "",
+    //   Salary: 0,
+    //   WorkCondition: "",
+    // },
   }),
 
   computed: {
@@ -253,9 +129,9 @@ name: "Danhmuckhachhang",
     },
   },
 
-  created() {
-    var data = axios.get("https://localhost:5001/api/v1/customers");
-    // this.customers = data.data;
+  created: async function () {
+    var data = await axios.get("https://localhost:44364/api/v1/customers");
+    this.customers = data.data;
     // console.log(this.customers)
   },
 
